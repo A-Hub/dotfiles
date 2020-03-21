@@ -50,7 +50,7 @@ sudo xbps-install -Sy xorg-minimal xrdb xsetroot xterm xprop
 sudo xbps-install -Sy base-devel make libXft-devel libX11-devel libXinerama-devel patch
 
 #sound programs
-sudo xbps-install -Sy alsa-utils apulse pamixer pulsemixer  
+sudo xbps-install -Sy alsa-utils apulse #pamixer pulsemixer  
 
 #install system tools
 sudo xbps-install -Sy feh udevil picom redshift ffmpegthumbnailer ConsoleKit2 apparmor sxhkd dunst scron rsync
@@ -60,7 +60,7 @@ sudo xbps-install -Sy gst-libav xdg-utils GConf
 sudo xbps-install -Sy dbus-glib #nss startup-notification
 
 #void stuff
-sudo xbps-install -y outils void-release-keys #provides signify and void release .pub file to verify iso
+sudo xbps-install -Sy outils void-release-keys #provides signify and void release .pub file to verify iso
 
 fi
 
@@ -160,7 +160,7 @@ fi
 
 ### install themes ###
 
-sudo xbps-install -Sy adwaita-icon-theme Adapta gtk-engine-murrine
+#sudo xbps-install -Sy adwaita-icon-theme Adapta gtk-engine-murrine
 
 #install qt for apps that need it
 #sudo xbps-install -Sy qt5
@@ -168,8 +168,8 @@ sudo xbps-install -Sy adwaita-icon-theme Adapta gtk-engine-murrine
 #install fonts
 sudo xbps-install -Sy freetype
 #sudo xbps-install -S noto-fonts-cjk noto-fonts-emoji noto-fonts-ttf noto-fonts-ttf-extra
-sudo xbps-install -Sy font-libertine-otf font-inconsolata-otf font-symbola font-hack-ttf nerd-fonts-otf 
-sudo xbps-install -Sy ipafont-fonts-otf
+#sudo xbps-install -Sy font-libertine-otf font-inconsolata-otf font-symbola font-hack-ttf nerd-fonts-otf 
+#sudo xbps-install -Sy ipafont-fonts-otf
 
 #install fish shell
 clear
@@ -207,17 +207,17 @@ read input
 if [ $input == 'y' ] || [ $input == 'Y' ]; then
 
 #cli programs to isntall
-sudo xbps-install -Sy neovim htop curl wget tealdeer ufetch
-sudo xbps-install -Sy mpv cmus lf pulsemixer pamixer mtm
+sudo xbps-install -Sy vim htop curl wget tealdeer ufetch
+sudo xbps-install -Sy mpv cmus lf mtm #pulsemixer pamixer mtm
 sudo xbps-install -Sy ImageMagick jp2a ffmpegthumbnailer #for ascii image previews and video thumbnails in lf
 sudo xbps-install -Sy zathura zathura-cb zathura-pdf-mupdf
 sudo xbps-install -Sy youtube-viewer youtube-dl
 sudo xbps-install -Sy transmission transmission-remote-cli
-sudo xbps-install -Sy trackma
+#sudo xbps-install -Sy trackma
 
-sudo xbps-install -Sy termdown spt
+#sudo xbps-install -Sy termdown spt
 #install vim plug for neovim
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
 
