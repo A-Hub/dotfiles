@@ -18,20 +18,22 @@ in the future.
 
 ## Installation
 
-First remove all files from your home directory. If on a fresh install there shouldn't be many files.
-
-`$ sudo mkdir /home/tmp/`  
-`$ sudo mv ~/*.* /home/tmp/`
-
-Install git with:
-
-`$ sudo xbps-install -S git`
+Install git
 
 and then clone this repo
 
 `$ cd ~`
 
-`$ git clone https://gitlab.com/ahub/dotfiles.git .`
+`$ git clone --bare https://github.com/A-Hub/dotfiles.git $HOME/dotfiles`
+
+ensure the config alias is defined
+`alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'`
+
+then checkout contents of bare repository to populate your home directory.
+`config checkout`
+
+for more info read [this article](https://www.atlassian.com/git/tutorials/dotfiles)
+
 
 finally run the install script in ~/.local/installers/void-install.sh
 
