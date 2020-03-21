@@ -1,0 +1,6 @@
+*automate intire install, auto add exec to udevil config, change mirrors, visudo permissions, apparmor
+
+BUGS
+*dwm-bar.sh script will cause the system to freeze if xbps-install is not in the visudo file with nopasswd
+
+*suckless-install.sh does not compile dmenu for some reason

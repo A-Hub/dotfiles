@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+#sets a random wallpaper using feh from the ~/wallpapers directory
+
+WALLP=`find -L ~/wallpapers/ -iname "*.*" -print | shuf -n 1`
+feh --bg-scale $WALLP

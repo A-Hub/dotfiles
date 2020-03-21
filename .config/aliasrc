@@ -1,0 +1,32 @@
+#better commands
+alias ls="ls -hN --color=auto --group-directories-first"
+
+#git
+alias gs='git status | less'
+
+#xbps
+alias xi='sudo xbps-install'
+alias xq='xbps-query'
+alias xr='sudo xbps-remove'
+
+#system power
+alias poweroff='sudo poweroff'
+alias reboot='sudo reboot'
+alias shutdown='sudo shutdown'
+
+#programs
+alias trc='transmission-remote-cli'
+alias pm='pulsemixer'
+alias vis='cli-visualizer'
+
+#alias for the sjisunzip program
+#unzips japanese archives, keeping their encoding
+#https://github.com/kjerk/sjisunzip/releases
+alias sjisunzip='wine ~/.local/share/sjisunzip.exe'
+
+#Youtube
+alias yv='youtube-viewer' 
+alias yd='youtube-dl'
+
+#dotfiles configuration alias
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 

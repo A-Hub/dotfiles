@@ -1,0 +1,29 @@
+super + F12
+	amixer sset Master 5%+  && ~/.local/scripts/dwm-bar.sh
+super + F11
+	amixer sset Master 5%-  && ~/.local/scripts/dwm-bar.sh
+super + F10
+	amixer sset Master toggle && ~/.local/scripts/dwm-bar.sh
+
+super + c
+	sh ~/.local/scripts/toggle-comp
+
+super + a
+	sh ~/scripts/appimages
+
+
+super + m
+	st -e neomutt
+super + shift + m
+	st -e mbsync -a
+
+super + s
+	st -e htop & st -e sudo radeontop 
+
+super + k
+	xkill
+
+super + shift + x
+	sudo poweroff
+super + + shift + r
+	sudo reboot

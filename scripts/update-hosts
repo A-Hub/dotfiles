@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+cd ~/scripts
+if [ ! -f "./.hosts.orig" ]; then
+	cp /etc/hosts ./.hosts.orig
+fi
+
+rm ./.swc_hosts
+sudo rm /etc/hosts
+curl https://someonewhocares.org/hosts/hosts -o ./.swc_hosts
+
+if [ -f "$HOME/.config/blocklist" ]; then
+    cat ./.hosts.orig $HOME/.config/blocklist ./.swc_hosts > ./hosts
+else
+    cat ./.hosts.orig ./.swc_hosts > ./hosts
+fi
+
+sudo mv ./hosts /etc/

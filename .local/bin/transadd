@@ -1,0 +1,34 @@
+#!/usr/bin/env sh
+# script copied from Luke Smith to add a torrent
+# removed part of first line that uses i3blocks
+# modifications to allow the user to select the download directory using lf
+
+
+pgrep -x transmission-da > /dev/null || (transmission-daemon && notify-send "Starting transmission daemon..." && sleep 3)
+
+#SEL="$(cat ~/.config/trans-dirs | dmenu -p "select download directory:")"
+
+OPT="$(echo "default\nlf select\nlf last" | dmenu -p "download to:")"
+
+if [ "$OPT" = "lf select" ]; then
+	if [ ! -f ~/.cache/lf/lastpath ]; then
+		mkdir -p ~/.cache/lf/
+		touch ~/.cache/lf/lastpath
+		echo "~" > ~/.cache/lf/lastpath
+	fi
+	st -e lf -last-dir-path ~/.cache/lf/lastpath "$(cat ~/.cache/lf/lastpath)" 
+	SEL="$(cat ~/.cache/lf/lastpath)"
+elif [ "$OPT" = "lf last" ]; then
+	SEL="$(cat ~/.cache/lf/lastpath)"
+else
+	SEL=""
+fi
+
+if [ -d "$SEL" ]; then
+#	notify-send "Transmission daemon" "download to: $SEL"
+	transmission-remote -a "$@" -w "$SEL" && notify-send " Transmission-daemon" "Torrent added to $SEL"
+else
+
+#	notify-send "Transmission daemon" "SEL invalid: $SEL"
+	transmission-remote -a "$@" && notify-send " Transmission-daemon" "Torrent added."
+fi

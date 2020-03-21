@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+if [ "$(pgrep picom)" ]; then
+	pkill picom 
+else
+	picom &
+fi

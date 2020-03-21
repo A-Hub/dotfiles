@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+sleep 30 
+if [ -d /media/Seagate_HDD ]; then
+	mkdir -p ~/.cache/transmission
+	wget -P ~/.cache/transmission http://john.bitsurge.net/public/biglist.p2p.gz
+	gzip -d ~/.cache/transmission/biglist.p2p.gz
+	if [ -f ~/.config/transmission-daemon/blocklists/biglist.p2p ]; then
+		rm ~/.config/transmission-daemon/blocklists/*
+	fi
+	mv ~/.cache/transmission/biglist.p2p ~/.config/transmission-daemon/blocklists/
+	if [ "$(pgrep transmission-daemon)" ]; then
+		killall transmission-daemon
+	fi
+
+	transmission-daemon &
+else
+	notify-send "❗ Transmission-daemon" "unable to find Seagate_HDD. daemon not started."
+fi

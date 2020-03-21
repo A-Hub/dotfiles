@@ -1,0 +1,39 @@
+#!/usr/bin/env sh
+#=======================================================
+#adds bookmark functionality to surf using dmenu
+#
+# A file in $startdir will be seen as a collection of websites.
+# A directory in $startdir is then a collection of those files.
+# This script can navigate through directories created in $startdir.
+# Press esc to go back a directory. esc at $startdir will close the
+# dmenu prompt.
+#
+# https://github.com/A-Hub/dotfiles 
+#=======================================================
+startdir=$HOME/.local/bmarks
+dir=$startdir
+
+list()
+{
+    sel=$(ls $dir | dmenu -p "select directory")
+    if [ ! $sel ]; then
+        if [ "$dir" != "$startdir" ]; then
+            dir="$(dirname $dir)"
+            list
+        fi
+    else
+        if [ -d $dir/$sel ]; then
+            dir=$dir/$sel
+            list
+        else
+            site=$(cat $dir/$sel | dmenu -l 10 -p "select site")
+            if [ ! $site ]; then
+                list
+            else
+                $BROWSER $site
+            fi
+        fi
+    fi
+}
+
+list

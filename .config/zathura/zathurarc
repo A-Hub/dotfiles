@@ -1,0 +1,15 @@
+set statusbar-h-padding 50
+set statusbar-v-padding 0
+set page-padding 10 
+
+map i recolor
+
+#KEYBINDINGS
+#map <A-a> shortcut_function
+#map <C-a> shortcut_function
+# A - Alt
+# C - Control
+# S - Shift
+#map <A--> zoom out
+#map <A-=> zoom in
+

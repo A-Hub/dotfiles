@@ -1,0 +1,23 @@
+[Default Applications]
+application/pdf=pdf.desktop;
+image/gif=img.desktop;
+image/jpeg=img.desktop;
+image/png=img.desktop;
+text/plain=text.desktop;
+text/x-shellscript=text.desktop;
+x-scheme-handler/magnet=torrent.desktop;
+application/x-bittorrent=torrent.desktop;
+text/html=web.desktop
+x-scheme-handler/http=web.desktop
+x-scheme-handler/https=web.desktop
+x-scheme-handler/about=web.desktop
+x-scheme-handler/unknown=web.desktop
+x-scheme-handler/discord-424004941485572097=discord-424004941485572097.desktop
+x-scheme-handler/discord-529050037532098580=discord-529050037532098580.desktop
+
+[Added Associations]
+image/jpeg=feh.desktop;
+image/png=feh.desktop;
+text/html=web.desktop;
+inode/directory=lf.desktop
+
