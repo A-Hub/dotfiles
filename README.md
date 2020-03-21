@@ -27,9 +27,11 @@ and then clone this repo
 `$ git clone --bare https://github.com/A-Hub/dotfiles.git $HOME/dotfiles`
 
 ensure the config alias is defined
+
 `alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'`
 
 then checkout contents of bare repository to populate your home directory.
+
 `config checkout`
 
 for more info read [this article](https://www.atlassian.com/git/tutorials/dotfiles)
