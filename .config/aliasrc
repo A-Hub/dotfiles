@@ -25,7 +25,7 @@ alias vis='cli-visualizer'
 alias sjisunzip='wine ~/.local/share/sjisunzip.exe'
 
 #Youtube
-alias yv='youtube-viewer' 
+alias yv='straw-viewer' 
 alias yd='youtube-dl'
 
 #dotfiles configuration alias

@@ -83,7 +83,7 @@ sysupdates() {
 
 
 cputemp() {
-	icon="CPU: $(cat /sys/class/thermal/thermal_zone0/temp | sed 's/\(.\)..$/.\1°C/')"
+	icon="CPU: $(cat /sys/class/thermal/thermal_zone2/temp | sed 's/\(.\)..$/.\1°C/')"
 
 	printf "%s\n" "$icon"
 }
