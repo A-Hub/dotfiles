@@ -51,7 +51,7 @@ netup() {
         	else
             	icon="🌐 $iface"
         	fi
-    	elif [ "$icon" ]; then
+    	elif [ -z "$icon" ]; then
         	icon="❗ no internet"
     	fi
 	done
@@ -83,7 +83,7 @@ sysupdates() {
 
 
 cputemp() {
-	icon="CPU: $(cat /sys/class/thermal/thermal_zone2/temp | sed 's/\(.\)..$/.\1°C/')"
+	icon="CPU: $(cat /sys/class/thermal/thermal_zone0/temp | sed 's/\(.\)..$/.\1°C/')"
 
 	printf "%s\n" "$icon"
 }
@@ -104,7 +104,7 @@ battery() {
 #}
 
 update() {
-	xsetroot -name " $(sysupdates)$SEP$(weather)$SEP$(cputemp)$SEP$(netup)$SEP$(audio)$SEP$(ddate) "
+	xsetroot -name " $(sysupdates)$SEP$(weather)$SEP$(cputemp)$SEP$(battery)$SEP$(netup)$SEP$(audio)$SEP$(ddate) "
 }
 
 if [ $1 ] && [ $1 = "-l" ]; then    
