@@ -49,7 +49,7 @@ sudo xbps-install -Sy xorg-minimal xrdb xsetroot xterm xprop
 sudo xbps-install -Sy alsa-utils apulse 
 
 #install system tools
-sudo xbps-install -Sy freetype ConsoleKit2 apparmor gst-libav xdg-utils GConf wget curl chrony
+sudo xbps-install -Sy freetype apparmor elogind gst-libav xdg-utils GConf wget curl chrony #ConsoleKit2 
 
 ["$NONFREE" = "y" ] && sudo xbps-install -Sy unrar
 
@@ -235,8 +235,8 @@ fi
 
 ### setup services ###
 sudo ln -s /etc/sv/dbus /var/service
-sudo ln -s /etc/sv/cgmanager /var/service/
-sudo ln -s /etc/sv/consolekit /var/service/
+#sudo ln -s /etc/sv/cgmanager /var/service/
+sudo ln -s /etc/sv/elogind /var/service/
 sudo ln -s /etc/sv/chronyd /var/service/
 
 ### set limits.conf for esync

@@ -19,14 +19,9 @@ alias trc='transmission-remote-cli'
 alias pm='pulsemixer'
 alias vis='cli-visualizer'
 
-#alias for the sjisunzip program
-#unzips japanese archives, keeping their encoding
-#https://github.com/kjerk/sjisunzip/releases
-alias sjisunzip='wine ~/.local/share/sjisunzip.exe'
-
 #Youtube
 alias yv='straw-viewer' 
 alias yd='youtube-dl'
 
 #dotfiles configuration alias
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME' 
