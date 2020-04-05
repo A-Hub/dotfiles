@@ -43,7 +43,7 @@ if [ $input == 'y' ] || [ $input == 'Y' ]; then
 
 #install xorg
 #sudo xbps-install -Sy xorg xterm
-sudo xbps-install -Sy xorg-minimal xrdb xsetroot xterm xprop 
+sudo xbps-install -Sy xorg-minimal xrdb xsetroot xterm xprop xrandr 
 
 #sound programs
 sudo xbps-install -Sy alsa-utils apulse 
@@ -136,6 +136,19 @@ if [ $amdin == 'y' ] || [ $amdin == 'Y' ]; then
 
 fi
 
+clear
+echo "setup intel graphics drivers?(y/N)"
+read intelin
+
+if [ $intelin == 'y' ] || [ $intelin == 'Y' ]; then
+	sudo xbps-install -Sy xf86-video-intel mesa-dri intel-video-accel	
+	sudo ln -s ~/.config/.sysconf/etc/X11/xorg.conf.d/20-intel.conf /etc/X11/xorg.conf.d
+
+	#to fix issues running steam
+	#xi -S vulkan-loader vulkan-loader-32bit mesa-dri mesa-dri-32bit
+
+fi
+
 sudo xbps-install -Sy vulkan-loader
 
 [ "$MULTILIB" = "y" ] && sudo xbps-install -Sy vulkan-loader-32bit
@@ -222,7 +235,7 @@ fi
 #sudo ln -s /lib/libncurses.so.6.1 /lib/libtinfo.so.6
 
 #my devel
-sudo xbps-install -Sy tcc
+sudo xbps-install -Sy base-devel make gcc gdb 
 
 #sudo xbps-install -Sy lua love luarocks
 

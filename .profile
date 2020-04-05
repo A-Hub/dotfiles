@@ -33,7 +33,14 @@ export PATH="$HOME/.local/bin/:$PATH"
 export PATH="$HOME/.appimages/:$PATH"
 export PATH="$HOME/scripts/:$PATH"
 
-export SSYSTEM="ALSA" #system variable to define sound system?
+#bspwm config
+PANEL_FIFO=/tmp/panel-fifo
+PANEL_HEIGHT=24
+PANEL_FONT="-*-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
+PANEL_WM_NAME=bspwm_panel
+export PANEL_FIFO PANEL_HEIGHT PANEL_FONT PANEL_WM_NAME
 
-[[ $XDG_VTNR -le 2 ]] && startx 
+#export SSYSTEM="ALSA" #system variable to define sound system?
+
+[[ $XDG_VTNR -le 2 ]] && [ -f ~/.xinitrc ]  && startx 
 #[ "$(tty)" = "/dev/tty1" ]  && exec startx

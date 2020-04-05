@@ -20,7 +20,7 @@ alias pm='pulsemixer'
 alias vis='cli-visualizer'
 
 #Youtube
-alias yv='straw-viewer' 
+alias yv='straw-viewer --resolution=360p' 
 alias yd='youtube-dl'
 
 #dotfiles configuration alias
