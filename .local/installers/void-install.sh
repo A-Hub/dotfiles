@@ -235,7 +235,7 @@ fi
 #sudo ln -s /lib/libncurses.so.6.1 /lib/libtinfo.so.6
 
 #my devel
-sudo xbps-install -Sy base-devel make gcc gdb 
+#sudo xbps-install -Sy base-devel make gcc gdb 
 
 #sudo xbps-install -Sy lua love luarocks
 

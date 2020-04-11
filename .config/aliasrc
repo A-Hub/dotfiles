@@ -9,6 +9,9 @@ alias xi='sudo xbps-install'
 alias xq='xbps-query'
 alias xr='sudo xbps-remove'
 
+
+alias glrun='proot -r ~/void-glibc -b /home/'
+
 #system power
 alias poweroff='sudo poweroff'
 alias reboot='sudo reboot'
