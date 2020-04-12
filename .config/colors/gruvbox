@@ -50,11 +50,12 @@ cyan[]
 
 
 !dwm variables
-#define DWM_GRAY1 BG0
-#define DWM_GRAY2 BG
-#define DWM_GRAY3 FG
-#define DWM_GRAY4 FG
-#define DWM_CYAN  GREEN
+!#define DWM_GRAY1 BG0
+!#define DWM_GRAY2 BG
+!#define DWM_GRAY3 FG
+!#define DWM_GRAY4 FG
+!#define DWM_CYAN  BLUE 
+
 
 !terminal variables
 #define COLOR0     BG0_H 
@@ -77,4 +78,16 @@ cyan[]
 #define FOREGROUND FG
 
 
+#define DWM_NBDR   COLOR8 
+#define DWM_NBG    COLOR0 
+#define DWM_NFG    COLOR15
+#define DWM_SBDR   COLOR15
+#define DWM_SBG    COLOR2
+#define DWM_SFG    COLOR15
+
+!dmenu colors
+#define DMENU_NBG  COLOR0
+#define DMENU_NFG  COLOR15
+#define DMENU_SBG  COLOR1
+#define DMENU_SFG  COLOR15
 

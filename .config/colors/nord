@@ -41,10 +41,28 @@
 !#define.cursorColor:  nord4
 
 !dwm variables
-#define DWM_GRAY1 nord0
-#define DWM_GRAY2 nord0
-#define DWM_GRAY3 nord9
-#define DWM_GRAY4 nord5
-#define DWM_CYAN  nord3
+!#define DWM_GRAY1 nord0
+!#define DWM_GRAY2 nord0
+!#define DWM_GRAY3 nord9
+!#define DWM_GRAY4 nord5
+!#define DWM_CYAN  nord3
 
+#define DWM_NBDR   nord15 
+#define DWM_NBG    nord0
+#define DWM_NFG    nord8
+#define DWM_SBDR   nord15
+#define DWM_SBG    nord2
+#define DWM_SFG    nord15
 
+!#define DWM_NBDR   COLOR8
+!#define DWM_NBG    COLOR0
+!#define DWM_NFG    COLOR15
+!#define DWM_SBDR   COLOR15
+!#define DWM_SBG    COLOR2
+!#define DWM_SFG    COLOR15
+
+!dmenu colors
+#define DMENU_NBG  COLOR0
+#define DMENU_NFG  COLOR15
+#define DMENU_SBG  COLOR1
+#define DMENU_SFG  COLOR15

@@ -14,13 +14,6 @@
 #define YELLOW  #f1fa8c
 #define WT      #bbbbbb
 
-!dwm variables
-#define DWM_GRAY1 BG 
-#define DWM_GRAY2 CMNT
-#define DWM_GRAY3 CYAN
-#define DWM_GRAY4 FG
-#define DWM_CYAN  CMNT
-
 !terminal variables
 #define COLOR0     BLACK
 #define COLOR1     RED
@@ -41,14 +34,18 @@
 #define BACKGROUND BG
 #define FOREGROUND FG
 
-/* original color settings
-kept here for reference
+!dwm colors
+#define DWM_NBDR BG
+#define DWM_NBG  BG
+#define DWM_NFG  CYAN 
+#define DWM_SBDR CMNT
+#define DWM_SBG  CMNT
+#define DWM_SFG  FG
 
-dwm.normbordercolor: BG    
-dwm.normbgcolor:     BG   
-dwm.normfgclolor:    CYAN    
-dwm.selbordercolor:  CMNT    
-dwm.selbgcolor:      CMNT   
-dwm.selfgcolor:      FG  */ 
 
+!dmenu colors
+#define DMENU_NBG  COLOR0
+#define DMENU_NFG  COLOR15
+#define DMENU_SBG  COLOR1
+#define DMENU_SFG  COLOR15
 

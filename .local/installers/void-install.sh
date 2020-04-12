@@ -218,6 +218,7 @@ sudo xbps-install -Sy ImageMagick ffmpegthumbnailer viu #jp2a #for ascii image p
 sudo xbps-install -Sy zathura zathura-cb zathura-pdf-mupdf
 sudo xbps-install -Sy youtube-dl
 sudo xbps-install -Sy transmission transmission-remote-cli
+sudo xbps-install -Sy pywal
 #sudo xbps-install -Sy trackma
 
 fi

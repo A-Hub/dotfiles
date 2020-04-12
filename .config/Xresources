@@ -23,6 +23,9 @@ XTerm.vt100.faceName: mono:size=10
 !cwscale      FLOAT,   &cwscale },
 !chscale      FLOAT   &chscale },
 
+!dmenu settings
+dmenu.font : mono:pixelsize=13 
+
 
 /*** COLOR SETTINGS ***/
 
@@ -32,10 +35,13 @@ XTerm.vt100.faceName: mono:size=10
 
 /* select color theme to use */
 !#include "./colors/nord"
-#include "./colors/gruvbox"
+!#include "./colors/gruvbox"
 !#include "./colors/dracula"
+#include "./colors/pywal"
 
-/* dwm.normbordercolor:   border not currently selected 
+
+/* DWM colors 
+ * dwm.normbordercolor:   border not currently selected 
  * dwm.normbgcolor:       bg of top bar, bg of not selected tags, bg of dmenu 
  * dwm.normfgclolor:      ??? 
  * dwm.selbordercolor:    active window border color, color of selected entry in dmenu 
@@ -43,13 +49,20 @@ XTerm.vt100.faceName: mono:size=10
  * dwm.selfgcolor:        color of window title text, color of current tag indicator,  
  */
 
-/* DWM colors */
-dwm.normbordercolor: DWM_GRAY1    
-dwm.normbgcolor:     DWM_GRAY1   
-dwm.normfgclolor:    DWM_GRAY3
-dwm.selbordercolor:  DWM_CYAN
-dwm.selbgcolor:      DWM_CYAN
-dwm.selfgcolor:      DWM_GRAY4
+!set dwm colors defined in included file above
+dwm.normbordercolor: DWM_NBDR    
+dwm.normbgcolor:     DWM_NBG   
+dwm.normfgclolor:    DWM_NFG
+dwm.selbordercolor:  DWM_SBDR
+dwm.selbgcolor:      DWM_SBG
+dwm.selfgcolor:      DWM_SFG
+
+!set dmenu colors defined in included file above
+dmenu.background : DMENU_NBG 
+dmenu.foreground : DMENU_NFG
+dmenu.selbackground : DMENU_SBG
+dmenu.selforeground : DMENU_SFG 
+
 
 /* ST/Xterm colors */
 *.color0:     COLOR0 
