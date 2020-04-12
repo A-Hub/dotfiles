@@ -37,8 +37,8 @@ dmenu.font : mono:pixelsize=13
 !#include "./colors/nord"
 !#include "./colors/gruvbox"
 !#include "./colors/dracula"
-#include "./colors/pywal"
-
+!#include "./colors/pywal"
+#include "./colors/color"
 
 /* DWM colors 
  * dwm.normbordercolor:   border not currently selected 
@@ -48,6 +48,51 @@ dmenu.font : mono:pixelsize=13
  * dwm.selbgcolor:        selected tag color, color of section of top bar displaying window title 
  * dwm.selfgcolor:        color of window title text, color of current tag indicator,  
  */
+
+!source dwm colors from color pallete if not defined
+#ifndef DWM_NBDR
+#define DWM_NBDR COLOR8 
+#endif
+#ifndef DWM_NBG
+#define DWM_NBG COLOR0 
+#endif
+#ifndef DWM_NFG
+#define DWM_NFG COLOR15  
+#endif
+#ifndef DWM_SBDR 
+#define DWM_SBDR COLOR15
+#endif
+#ifndef DWM_SBG
+#define DWM_SBG COLOR2 
+#endif
+#ifndef DWM_FBG
+#define DWM_FBG COLOR15 
+#endif
+
+!source dmenu colors from color pallette if not defined
+#ifndef DMENU_NBG
+#define DMENU_NBG  COLOR0
+#endif
+#ifndef DMENU_NFG
+#define DMENU_NFG  COLOR15
+#endif
+#ifndef DMENU_SBG
+#define DMENU_SBG  COLOR1
+#endif
+#ifndef DMENU_SFG
+#define DMENU_SFG  COLOR15
+#endif
+
+!source colors for BG and FG if not defined
+#ifndef BACKGROUND
+#define BACKGROUND COLOR0
+#endif
+#ifndef FOREGROUND
+#define FOREGROUND COLOR15
+#endif
+
+
+
 
 !set dwm colors defined in included file above
 dwm.normbordercolor: DWM_NBDR    

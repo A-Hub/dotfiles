@@ -20,7 +20,7 @@ call plug#end()
 
 "set variables
     let g:airline_powerline_fonts = 1
-    let g:airline_theme='dracula'
+    let g:airline_theme='base16'
     "let g:airline_solarized_bg='dark'
     let g:airline#extensions#tabline#enabled = 1
 
