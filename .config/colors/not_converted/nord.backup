@@ -1,0 +1,86 @@
+#3B4252
+#BF616A
+#A3BE8C
+#EBCB8B #define COLOR3       nord13
+#81A1C1  #define COLOR4       nord9
+#B48EAD #define COLOR5       nord15
+#88C0D0 #define COLOR6       nord8
+#E5E9F0 #define COLOR7       nord5
+#4C566A #define COLOR8       nord3
+#BF616A #define COLOR9       nord11
+#A3BE8C #define COLOR10      nord14
+#EBCB8B #define COLOR11      nord13
+#81A1C1 #define COLOR12      nord9
+#B48EAD #define COLOR13      nord15
+#8FBCBB #define COLOR14      nord7
+#ECEFF4 #define COLOR15      nord6
+
+
+/* Nord 
+ * this was mostly copied from the Nord repo Xresources section */
+
+/*!color pallette
+#define nord0  #2E3440
+#define nord1  #3B4252
+#define nord2  #434C5E
+#define nord3  #4C566A
+#define nord4  #D8DEE9
+#define nord5  #E5E9F0
+#define nord6  #ECEFF4
+#define nord7  #8FBCBB
+#define nord8  #88C0D0
+#define nord9  #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
+
+!terminal variables
+#define COLOR0       nord1
+#define COLOR1       nord11
+#define COLOR2       nord14
+#define COLOR3       nord13
+#define COLOR4       nord9
+#define COLOR5       nord15
+#define COLOR6       nord8
+#define COLOR7       nord5
+#define COLOR8       nord3
+#define COLOR9       nord11
+#define COLOR10      nord14
+#define COLOR11      nord13
+#define COLOR12      nord9
+#define COLOR13      nord15
+#define COLOR14      nord7
+#define COLOR15      nord6
+#define FOREGROUND   nord4
+#define BACKGROUND   nord0
+!#define.cursorColor:  nord4
+
+!dwm variables
+!#define DWM_GRAY1 nord0
+!#define DWM_GRAY2 nord0
+!#define DWM_GRAY3 nord9
+!#define DWM_GRAY4 nord5
+!#define DWM_CYAN  nord3
+
+#define DWM_NBDR   nord15 
+#define DWM_NBG    nord0
+#define DWM_NFG    nord8
+#define DWM_SBDR   nord15
+#define DWM_SBG    nord2
+#define DWM_SFG    nord15
+
+!#define DWM_NBDR   COLOR8
+!#define DWM_NBG    COLOR0
+!#define DWM_NFG    COLOR15
+!#define DWM_SBDR   COLOR15
+!#define DWM_SBG    COLOR2
+!#define DWM_SFG    COLOR15
+
+!dmenu colors
+#define DMENU_NBG  COLOR0
+#define DMENU_NFG  COLOR15
+#define DMENU_SBG  COLOR1
+#define DMENU_SFG  COLOR15*/

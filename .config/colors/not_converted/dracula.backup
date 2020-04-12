@@ -1,0 +1,51 @@
+/* Dracula */
+
+!color pallette
+#define BG      #282a36	
+#define CL      #44475a	
+#define FG      #f8f8f2 
+#define CMNT    #6272a4	
+#define CYAN    #8be9fd	
+#define GREEN   #50fa7b	
+#define ORANGE  #ffb86c	
+#define PINK    #ff79c6	
+#define PURPLE  #bd93f9	
+#define RED     #ff5555	
+#define YELLOW  #f1fa8c
+#define WT      #bbbbbb
+
+!terminal variables
+#define COLOR0     BLACK
+#define COLOR1     RED
+#define COLOR2     GREEN
+#define COLOR3     YELLOW
+#define COLOR4     PURPLE 
+#define COLOR5     PINK 
+#define COLOR6     CYAN
+#define COLOR7     WT
+#define COLOR8     CL
+#define COLOR9     RED
+#define COLOR10    GREEN
+#define COLOR11    YELLOW
+#define COLOR12    PURPLE
+#define COLOR13    PINK
+#define COLOR14    CYAN
+#define COLOR15    WHITE
+#define BACKGROUND BG
+#define FOREGROUND FG
+
+!dwm colors
+#define DWM_NBDR BG
+#define DWM_NBG  BG
+#define DWM_NFG  CYAN 
+#define DWM_SBDR CMNT
+!#define DWM_SBG  CMNT
+#define DWM_SFG  FG
+
+
+!dmenu colors
+#define DMENU_NBG  COLOR0
+#define DMENU_NFG  COLOR15
+#define DMENU_SBG  COLOR1
+#define DMENU_SFG  COLOR15
+
