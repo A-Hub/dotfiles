@@ -2,14 +2,21 @@
 
 sleep 30 
 [ ! -d ~/.cache/transmission ] && mkdir -p ~/.cache/transmission
+wget -P ~/.cache/transmission https://github.com/sahsu/transmission-blocklist/releases/download/1.0.0/blocklist.gz
+gzip -d ~/.cache/transmission/blocklist.gz
 
-wget -P ~/.cache/transmission http://john.bitsurge.net/public/biglist.p2p.gz
-gzip -d ~/.cache/transmission/biglist.p2p.gz
-
-if [ -f ~/.config/transmission-daemon/blocklists/biglist.p2p ]; then
+if [ -f ~/.config/transmission-daemon/blocklists/blocklist ]; then
 	rm ~/.config/transmission-daemon/blocklists/*
 fi
 
-mv ~/.cache/transmission/biglist.p2p ~/.config/transmission-daemon/blocklists/
+mv ~/.cache/transmission/blocklist ~/.config/transmission-daemon/blocklists/
+#wget -P ~/.cache/transmission http://john.bitsurge.net/public/biglist.p2p.gz
+#gzip -d ~/.cache/transmission/biglist.p2p.gz
+
+#if [ -f ~/.config/transmission-daemon/blocklists/biglist.p2p ]; then
+#	rm ~/.config/transmission-daemon/blocklists/*
+#fi
+
+#mv ~/.cache/transmission/biglist.p2p ~/.config/transmission-daemon/blocklists/
 
 [ -z "$(pgrep transmission)" ] && transmission-daemon &

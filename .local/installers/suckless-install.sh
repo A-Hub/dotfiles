@@ -49,13 +49,13 @@ cd ~/repos/.patches/st
 #wget st.suckless.org/patches/solarized/st-no_bold_colors-0.8.1.diff
 #curl st.suckless.org/patches/solarized/st-solarized-dark-20180411-041912a.diff
 wget st.suckless.org/patches/alpha/st-alpha-0.8.2.diff
-wget st.suckless.org/patches/scrollback/st-scrollback-20190331-21367a0.diff
+wget st.suckless.org/patches/scrollback/st-scrollback-20200504-28ad288.diff
 
 cd ~/repos/st
 #patch -p1 < ../.patches/st/st-no_bold_colors-0.8.1.diff
 #patch -p1 < ../.patches/st/st-solarized-dark-20180411-041912a.diff
 patch -p1 < ../.patches/st/st-alpha-0.8.2.diff
-patch -p1 < ../.patches/st/st-scrollback-20190331-21367a0.diff
+patch -p1 < ../.patches/st/st-scrollback-20200504-28ad288.diff
 
 rm ~/repos/st/config.h
 
@@ -81,10 +81,12 @@ mkdir ~/repos/.patches/surf
 cd ~/repos/.patches/surf
 wget surf.suckless.org/patches/playexternal/surf-playexternal-20190724-b814567.diff
 wget surf.suckless.org/patches/popup-on-gesture/surf-popup-2.0.diff
+wget surf.suckless.org/patches/bookmarking/surf-bookmarks-20170722-723ff26.diff
 
 cd ~/repos/surf
 patch -p1 < ../.patches/surf/surf-playexternal-20190724-b814567.diff
 patch -p1 < ../.patches/surf/surf-popup-2.0.diff
+patch -p1 < ../.patches/surf/surf-bookmarks-20170722-723ff26.diff
 
 sudo make clean install
 

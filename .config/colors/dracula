@@ -1,0 +1,54 @@
+/* Dracula */
+
+!color pallette
+#define BG      #282a36	
+#define CL      #44475a	
+#define FG      #f8f8f2 
+#define CMNT    #6272a4	
+#define CYAN    #8be9fd	
+#define GREEN   #50fa7b	
+#define ORANGE  #ffb86c	
+#define PINK    #ff79c6	
+#define PURPLE  #bd93f9	
+#define RED     #ff5555	
+#define YELLOW  #f1fa8c
+#define WT      #bbbbbb
+
+!dwm variables
+#define DWM_GRAY1 BG 
+#define DWM_GRAY2 CMNT
+#define DWM_GRAY3 CYAN
+#define DWM_GRAY4 FG
+#define DWM_CYAN  CMNT
+
+!terminal variables
+#define COLOR0     BLACK
+#define COLOR1     RED
+#define COLOR2     GREEN
+#define COLOR3     YELLOW
+#define COLOR4     PURPLE 
+#define COLOR5     PINK 
+#define COLOR6     CYAN
+#define COLOR7     WT
+#define COLOR8     CL
+#define COLOR9     RED
+#define COLOR10    GREEN
+#define COLOR11    YELLOW
+#define COLOR12    PURPLE
+#define COLOR13    PINK
+#define COLOR14    CYAN
+#define COLOR15    WHITE
+#define BACKGROUND BG
+#define FOREGROUND FG
+
+/* original color settings
+kept here for reference
+
+dwm.normbordercolor: BG    
+dwm.normbgcolor:     BG   
+dwm.normfgclolor:    CYAN    
+dwm.selbordercolor:  CMNT    
+dwm.selbgcolor:      CMNT   
+dwm.selfgcolor:      FG  */ 
+
+

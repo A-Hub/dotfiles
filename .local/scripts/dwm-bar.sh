@@ -104,7 +104,7 @@ battery() {
 #}
 
 update() {
-	xsetroot -name " $(sysupdates)$SEP$(weather)$SEP$(cputemp)$SEP$(battery)$SEP$(netup)$SEP$(audio)$SEP$(ddate) "
+	xsetroot -name " $(sysupdates)$SEP$(weather)$SEP$(cputemp)$SEP$(netup)$SEP$(audio)$SEP$(ddate) "
 }
 
 if [ $1 ] && [ $1 = "-l" ]; then    

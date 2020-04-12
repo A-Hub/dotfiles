@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-xrdb ~/.config/.Xresources
+xrdb ~/.config/Xresources
 
 sxhkd &
 dunst &

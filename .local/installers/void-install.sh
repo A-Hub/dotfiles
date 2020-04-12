@@ -46,7 +46,7 @@ if [ $input == 'y' ] || [ $input == 'Y' ]; then
 sudo xbps-install -Sy xorg-minimal xrdb xsetroot xterm xprop xrandr 
 
 #sound programs
-sudo xbps-install -Sy alsa-utils apulse 
+sudo xbps-install -Sy alsa-utils apulse #pulseaudio pulsemixer 
 
 #install system tools
 sudo xbps-install -Sy freetype apparmor elogind gst-libav xdg-utils GConf wget curl chrony #ConsoleKit2 
@@ -199,6 +199,9 @@ if [ $input == 'y' ] || [ $input == 'Y' ]; then
 
 fi
 
+###themes and fonts
+#most themes are stored in my dotfiles repo
+sudo xbps-install -S nerd-fonts-otf
 
 
 ### install user programs ###
@@ -211,7 +214,7 @@ if [ $input == 'y' ] || [ $input == 'Y' ]; then
 #cli programs to isntall
 sudo xbps-install -Sy vim htop tealdeer ufetch
 sudo xbps-install -Sy mpv cmus lf mtm #pulsemixer pamixer mtm
-sudo xbps-install -Sy ImageMagick jp2a ffmpegthumbnailer #for ascii image previews and video thumbnails in lf
+sudo xbps-install -Sy ImageMagick ffmpegthumbnailer viu #jp2a #for ascii image previews and video thumbnails in lf
 sudo xbps-install -Sy zathura zathura-cb zathura-pdf-mupdf
 sudo xbps-install -Sy youtube-dl
 sudo xbps-install -Sy transmission transmission-remote-cli
@@ -226,8 +229,9 @@ echo "this will enable nonfree repos"
 read input
 if [ $input == 'y' ] || [ $input == 'Y' ]; then
     sudo xbps-install -Sy void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree 
-	sudo xbps-install -Sy wine-32bit wine-gecko wone-mono winetricks protontricks 
+	sudo xbps-install -Sy wine-32bit wine-gecko wine-mono winetricks protontricks 
 	sudo xbps-install -Sy lutris steam
+	sudo xbps-install -Sy libdrm-32bit
 fi
 
 #Haskell
@@ -290,6 +294,15 @@ sudo xbps-install -S gtk+-devel webkit2gtk-devel gcr-devel
   #straw-viewer dependencies
 sudo xbps-install -S perl-Module-Build
 
+
+echo "change mirror to alpha.us.voidlinux.org? (y/N)"
+read input
+if [ $input == 'y' ] || [ $input == 'Y' ]; then
+	sudo mkdir -p /etc/xbps.d
+	sudo cp /usr/share/xbps.d/*-repository-*.conf /etc/xbps.d/
+	sudo sed -i 's|https://alpha.de.repo.voidlinux.org|https://alpha.us.repo.voidlinux.org|g' /etc/xbps.d/*-repository-*.conf
+	sudo xbps-install -S
+fi
 
 
 sh ~/.local/installers/suckless-install.sh

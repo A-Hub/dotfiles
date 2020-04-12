@@ -1,0 +1,72 @@
+Xft.autohint: 1
+Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+Xcursor.theme: Adwaita
+
+!xterm font
+XTerm.vt100.faceName: mono:size=10
+
+!st settings
+*.font: mono:pixelsize=13
+*.borderpx:  2
+*.tabspaces: 4
+!cursorColor  STRING,  &colorname[258] },
+!termname     STRING,  &termname },
+!shell        STRING,  &shell },
+!xfps         INTEGER, &xfps },
+!actionfps    INTEGER, &actionfps },
+!blinktimeout INTEGER, &blinktimeout },
+!bellvolume   INTEGER, &bellvolume },
+!cwscale      FLOAT,   &cwscale },
+!chscale      FLOAT   &chscale },
+
+
+/*** COLOR SETTINGS ***/
+
+!global colors
+#define WHITE      #ffffff
+#define BLACK      #000000
+
+/* select color theme to use */
+!#include "./colors/nord"
+#include "./colors/gruvbox"
+!#include "./colors/dracula"
+
+/* dwm.normbordercolor:   border not currently selected 
+ * dwm.normbgcolor:       bg of top bar, bg of not selected tags, bg of dmenu 
+ * dwm.normfgclolor:      ??? 
+ * dwm.selbordercolor:    active window border color, color of selected entry in dmenu 
+ * dwm.selbgcolor:        selected tag color, color of section of top bar displaying window title 
+ * dwm.selfgcolor:        color of window title text, color of current tag indicator,  
+ */
+
+/* DWM colors */
+dwm.normbordercolor: DWM_GRAY1    
+dwm.normbgcolor:     DWM_GRAY1   
+dwm.normfgclolor:    DWM_GRAY3
+dwm.selbordercolor:  DWM_CYAN
+dwm.selbgcolor:      DWM_CYAN
+dwm.selfgcolor:      DWM_GRAY4
+
+/* ST/Xterm colors */
+*.color0:     COLOR0 
+*.color1:     COLOR1 
+*.color2:     COLOR2 
+*.color3:     COLOR3
+*.color4:     COLOR4
+*.color5:     COLOR5
+*.color6:     COLOR6
+*.color7:     COLOR7
+*.color8:     COLOR8
+*.color9:     COLOR9
+*.color10:    COLOR10
+*.color11:    COLOR11
+*.color12:    COLOR12
+*.color13:    COLOR13
+*.color14:    COLOR14
+*.color15:    COLOR15
+*.background: BACKGROUND
+*.foreground: FOREGROUND
