@@ -16,12 +16,9 @@ Plug 'davisdude/vim-love-docs'
 
 call plug#end()
 
-
-
 "set variables
     let g:airline_powerline_fonts = 1
-    let g:airline_theme='base16'
-    "let g:airline_solarized_bg='dark'
+    let g:airline_theme='base16color'
     let g:airline#extensions#tabline#enabled = 1
 
 "syntax numbers, wildmode
@@ -31,7 +28,7 @@ call plug#end()
     set wildmode=longest,list,full
 
 "Tab Config
-    "set expandtab   "converts tabs to spaces
+    set expandtab   "converts tabs to spaces
     set shiftwidth=4
     set tabstop=4
 

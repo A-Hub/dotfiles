@@ -33,12 +33,8 @@ dmenu.font : mono:pixelsize=13
 #define WHITE      #ffffff
 #define BLACK      #000000
 
-/* select color theme to use */
-!#include "./colors/nord"
-!#include "./colors/gruvbox"
-!#include "./colors/dracula"
-!#include "./colors/pywal"
-#include "./colors/color"
+/* include color theme. theme can be set using ~/scripts/set_colors.sh*/
+#include "./color"
 
 /* DWM colors 
  * dwm.normbordercolor:   border not currently selected 
@@ -93,7 +89,6 @@ dmenu.font : mono:pixelsize=13
 
 
 
-
 !set dwm colors defined in included file above
 dwm.normbordercolor: DWM_NBDR    
 dwm.normbgcolor:     DWM_NBG   
@@ -103,8 +98,8 @@ dwm.selbgcolor:      DWM_SBG
 dwm.selfgcolor:      DWM_SFG
 
 !set dmenu colors defined in included file above
-dmenu.background : DMENU_NBG 
-dmenu.foreground : DMENU_NFG
+dmenu.background :    DMENU_NBG 
+dmenu.foreground :    DMENU_NFG
 dmenu.selbackground : DMENU_SBG
 dmenu.selforeground : DMENU_SFG 
 
