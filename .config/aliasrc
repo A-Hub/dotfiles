@@ -9,6 +9,7 @@ alias xi='sudo xbps-install'
 alias xq='xbps-query'
 alias xr='sudo xbps-remove'
 
+alias setwp='wal -s -t -e -i '
 
 alias glrun='proot -r ~/void-glibc -b /home/'
 
