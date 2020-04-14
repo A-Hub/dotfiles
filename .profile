@@ -31,6 +31,9 @@ export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/inputrc"
 export ALSA_CONFIG_PATH="$XDG_CONFIG_HOME/alsa/asoundrc"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 
+#move .vim from HOME
+#export VIMINIT=":source $XDG_CONFIG_HOME"/vim/vimrc
+
 
 #other settings
 export QT_QPA_PLATFORMTHEME="gtk2"  # Have QT use gtk2 theme.

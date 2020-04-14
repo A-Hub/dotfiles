@@ -1,18 +1,3 @@
-"move .vim into .config/vim/
-"set undodir=$XDG_DATA_HOME/vim/undo
-"set directory=$XDG_DATA_HOME/vim/swap
-"set backupdir=$XDG_DATA_HOME/vim/backup
-"set viewdir=$XDG_DATA_HOME/vim/view
-"set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
-"set runtimepath=$XDG_CONFIG_HOME/vim,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after
-
-
-"if empty(glob('$XDG_DATA_HOME/vim/autoload/plug.vim'))
-"  silent !curl -fLo $XDG_DATA_HOME/vim/autoload/plug.vim --create-dirs
-"    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-"  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-"endif
-
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

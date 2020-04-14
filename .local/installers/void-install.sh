@@ -211,7 +211,7 @@ read input
 if [ $input == 'y' ] || [ $input == 'Y' ]; then
 
 #cli programs to isntall
-sudo xbps-install -Sy vim htop 
+sudo xbps-install -Sy neovim htop 
 #pulsemixer pamixer
 sudo xbps-install -Sy mpv cmus cmus-ffmpeg cava  #audio cava -> console audio visualizer for alsa 
 sudo xbps-install -Sy lf mtm  #file browser terminal multiplexor 
@@ -280,6 +280,7 @@ fi
 
 #add directories if they dont exist
 sudo mkdir /etc/X11/xorg.conf.d/
+mkdir -p "$XDG_DATA_HOME"/vim/{undo,swap,backup}
 
 
 echo "disable mouse acceleration? (y/N)"
