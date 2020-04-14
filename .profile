@@ -11,6 +11,18 @@ export SXHKD_SHELL='/bin/sh'
 #remove things from $HOME
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DOCUMENTS_DIR="$HOME/docs"
+export XDG_DOWNLOAD_DIR="$HOME/dl"
+export XDG_MUSIC_DIR="$HOME/media/audio/music"
+export XDG_PICTURES_DIR="$HOME/media/img"
+export XDG_VIDEOS_DIR="$HOME/media/video"
+#XDG_DESKTOP_DIR="$HOME/Desktop"
+#XDG_PUBLICSHARE_DIR="$HOME/Public"
+#XDG_TEMPLATES_DIR="$HOME/Templates"
+#export XDG_RUNTIME_DIR="$HOME/.local/tmp/"
+
+export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 export ZDOTDIR="$HOME/.config/zsh"
 export NOTMUCH_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/notmuch-config"
 export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
@@ -24,7 +36,7 @@ export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 export QT_QPA_PLATFORMTHEME="gtk2"  # Have QT use gtk2 theme.
 
 
-LESSHISTFILE=/dev/null
+export LESSHISTFILE=/dev/null
 
 #get colored man pages
 export LESS_TERMCAP_mb=$'\e[1;32m'
