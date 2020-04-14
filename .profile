@@ -1,16 +1,30 @@
 #!/usr/bin/env sh
 
 # Get the aliases and functions
-[ -f $HOME/.bashrc ] && . $HOME/.bashrc
+#[ -f $HOME/.bashrc ] && . $HOME/.bashrc
 
 
-# Profile file. Runs on login. Environmental variables are set here.
 export SXHKD_SHELL='/bin/sh'
 
-export XDG_CONFIG_HOME=$HOME/.config
-
 #change default location of zsh config
+
+#remove things from $HOME
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
 export ZDOTDIR="$HOME/.config/zsh"
+export NOTMUCH_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/notmuch-config"
+export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
+export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
+export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/inputrc"
+export ALSA_CONFIG_PATH="$XDG_CONFIG_HOME/alsa/asoundrc"
+export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
+
+
+#other settings
+export QT_QPA_PLATFORMTHEME="gtk2"  # Have QT use gtk2 theme.
+
+
+LESSHISTFILE=/dev/null
 
 #get colored man pages
 export LESS_TERMCAP_mb=$'\e[1;32m'
@@ -22,7 +36,7 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 
-#set shell variables
+#set preferred programs
 export EDITOR=vim
 export VISUAL=vim
 export BROWSER=surf
@@ -190,10 +204,10 @@ ex=:\
 *.nix=:\
 	"
 
-# Add ~/.local/bin/ and ~/scripts/ to PATH
+# Add ~/.local/bin/ and ~/.local/scripts/ to PATH
 export PATH="$HOME/.local/bin/:$PATH"
-export PATH="$HOME/.appimages/:$PATH"
-export PATH="$HOME/scripts/:$PATH"
+#export PATH="$HOME/.appimages/:$PATH"
+export PATH="$HOME/.local/scripts/:$PATH"
 
 #bspwm config
 PANEL_FIFO=/tmp/panel-fifo
@@ -201,8 +215,6 @@ PANEL_HEIGHT=24
 PANEL_FONT="-*-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
 PANEL_WM_NAME=bspwm_panel
 export PANEL_FIFO PANEL_HEIGHT PANEL_FONT PANEL_WM_NAME
-
-#export SSYSTEM="ALSA" #system variable to define sound system?
 
 [[ $XDG_VTNR -le 2 ]] && [ -f ~/.xinitrc ]  && startx 
 #[ "$(tty)" = "/dev/tty1" ]  && exec startx

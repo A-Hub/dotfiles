@@ -29,10 +29,9 @@ fi
 
 
 #make directories
-mkdir ~/documents/
-mkdir ~/downloads/
-mkdir ~/pictures/
-mkdir ~/programs
+mkdir ~/docs/
+mkdir ~/dl/
+mkdir ~/media/
 
 
 ### install system programs/libraries ###
@@ -212,13 +211,16 @@ read input
 if [ $input == 'y' ] || [ $input == 'Y' ]; then
 
 #cli programs to isntall
-sudo xbps-install -Sy vim htop tealdeer ufetch
-sudo xbps-install -Sy mpv cmus lf mtm #pulsemixer pamixer mtm
+sudo xbps-install -Sy vim htop 
+#pulsemixer pamixer
+sudo xbps-install -Sy mpv cmus cmus-ffmpeg cava  #audio cava -> console audio visualizer for alsa 
+sudo xbps-install -Sy lf mtm  #file browser terminal multiplexor 
 sudo xbps-install -Sy ImageMagick ffmpegthumbnailer viu #jp2a #for ascii image previews and video thumbnails in lf
-sudo xbps-install -Sy zathura zathura-cb zathura-pdf-mupdf
-sudo xbps-install -Sy youtube-dl
-sudo xbps-install -Sy transmission transmission-remote-cli
-sudo xbps-install -Sy pywal
+sudo xbps-install -Sy zathura zathura-cb zathura-pdf-mupdf #pdfs manga
+sudo xbps-install -Sy youtube-dl #download youtube videos
+sudo xbps-install -Sy transmission transmission-remote-cli  #torrents
+sudo xbps-install -Sy pywal #generate themes from pictures
+sudo xbps-install -Sy tealdeer ufetch termdown  # misc utils
 #sudo xbps-install -Sy trackma
 
 fi
@@ -270,8 +272,8 @@ sudo sed -i 's/^allowed_options .*$/&, exec/g' /etc/udevil/udevil.conf
 echo "create modified hosts file from someonewhocares.org?\n do this at any time by running the ~/scripts/update-hosts script (y/N)"
 read input
 if [ $input == 'y' ] || [ $input == 'Y' ]; then
-	cd ~/scripts/
-	~/scripts/update-hosts
+	cd ~/.local/scripts/
+	~/.local/scripts/update-hosts
 fi
 
 

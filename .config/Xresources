@@ -36,6 +36,41 @@ dmenu.font : mono:pixelsize=13
 /* include color theme. theme can be set using ~/scripts/set_colors.sh*/
 #include "./color"
 
+!if COLOR15 is not defined, there is an error in ~/.config/colors. default to dracula
+#ifndef COLOR15
+    #define BG      #282a36
+    #define CL      #44475a
+    #define FG      #f8f8f2
+    #define CMNT    #6272a4
+    #define CYAN    #8be9fd
+    #define GREEN   #50fa7b
+    #define ORANGE  #ffb86c
+    #define PINK    #ff79c6
+    #define PURPLE  #bd93f9
+    #define RED     #ff5555
+    #define YELLOW  #f1fa8c
+    #define WT      #bbbbbb
+
+    #define COLOR0     BLACK
+    #define COLOR1     RED
+    #define COLOR2     GREEN
+    #define COLOR3     YELLOW
+    #define COLOR4     PURPLE
+    #define COLOR5     PINK
+    #define COLOR6     CYAN
+    #define COLOR7     WT
+    #define COLOR8     CL
+    #define COLOR9     RED
+    #define COLOR10    GREEN
+    #define COLOR11    YELLOW
+    #define COLOR12    PURPLE
+    #define COLOR13    PINK
+    #define COLOR14    CYAN
+    #define COLOR15    WHITE
+    #define BACKGROUND BG
+    #define FOREGROUND FG
+#endif 
+
 /* DWM colors 
  * dwm.normbordercolor:   border not currently selected 
  * dwm.normbgcolor:       bg of top bar, bg of not selected tags, bg of dmenu 
@@ -47,44 +82,44 @@ dmenu.font : mono:pixelsize=13
 
 !source dwm colors from color pallete if not defined
 #ifndef DWM_NBDR
-#define DWM_NBDR COLOR8 
+    #define DWM_NBDR COLOR8 
 #endif
 #ifndef DWM_NBG
-#define DWM_NBG COLOR0 
+    #define DWM_NBG COLOR0 
 #endif
 #ifndef DWM_NFG
-#define DWM_NFG COLOR15  
+    #define DWM_NFG COLOR15  
 #endif
 #ifndef DWM_SBDR 
-#define DWM_SBDR COLOR15
+    #define DWM_SBDR COLOR15
 #endif
 #ifndef DWM_SBG
-#define DWM_SBG COLOR2 
+    #define DWM_SBG COLOR2 
 #endif
 #ifndef DWM_FBG
-#define DWM_FBG COLOR15 
+    #define DWM_FBG COLOR15 
 #endif
 
 !source dmenu colors from color pallette if not defined
 #ifndef DMENU_NBG
-#define DMENU_NBG  COLOR0
+    #define DMENU_NBG  COLOR0
 #endif
 #ifndef DMENU_NFG
-#define DMENU_NFG  COLOR15
+    #define DMENU_NFG  COLOR15
 #endif
 #ifndef DMENU_SBG
-#define DMENU_SBG  COLOR1
+    #define DMENU_SBG  COLOR1
 #endif
 #ifndef DMENU_SFG
-#define DMENU_SFG  COLOR15
+    #define DMENU_SFG  COLOR15
 #endif
 
 !source colors for BG and FG if not defined
 #ifndef BACKGROUND
-#define BACKGROUND COLOR0
+    #define BACKGROUND COLOR0
 #endif
 #ifndef FOREGROUND
-#define FOREGROUND COLOR15
+    #define FOREGROUND COLOR15
 #endif
 
 

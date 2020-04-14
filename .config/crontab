@@ -1,3 +1,3 @@
-0 * * * * ~/scripts/update-weather.sh 
+0 * * * * ~/.local/scripts/update-weather.sh 
 30 * * * * sudo xbps-install -S
-0 20 * * * ~/scripts/backup.sh
+0 20 * * * ~/.local/scripts/backup.sh

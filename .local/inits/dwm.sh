@@ -5,7 +5,8 @@ sxhkd &
 dunst &
 picom &
 redshift &
-sh ~/.fehbg &
+#sh ~/.fehbg &
+feh --no-fehbg --bg-scale ~/.config/wall &
 devmon --mount-options "exec,nosuid,nodev,noatime" &
 sh ~/.local/scripts/dwm-bar.sh -l &
 [ -z "$(pgrep scrond)" ] && scrond -f ~/.config/crontab &

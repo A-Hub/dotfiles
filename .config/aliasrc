@@ -1,5 +1,6 @@
 #better commands
 alias ls="ls -hN --color=auto --group-directories-first"
+alias wget='wget --hsts-file ~/.config/wget/wget-hsts'
 
 #git
 alias gs='git status | less'
@@ -10,7 +11,8 @@ alias xq='xbps-query'
 alias xr='sudo xbps-remove'
 
 
-alias glrun='proot -r ~/void-glibc -b /home/'
+alias mocp='mocp -M ~/.config/moc/' #-T transparent-background'
+alias glrun='proot -r ~/.local/share/void-glibc -b /home/'
 
 #system power
 alias poweroff='sudo poweroff'
