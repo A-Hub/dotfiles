@@ -17,6 +17,7 @@ export XDG_DOWNLOAD_DIR="$HOME/dl"
 export XDG_MUSIC_DIR="$HOME/media/audio/music"
 export XDG_PICTURES_DIR="$HOME/media/img"
 export XDG_VIDEOS_DIR="$HOME/media/video"
+export HISTFILE="$XDG_DATA_HOME"/bash/history
 #XDG_DESKTOP_DIR="$HOME/Desktop"
 #XDG_PUBLICSHARE_DIR="$HOME/Public"
 #XDG_TEMPLATES_DIR="$HOME/Templates"
@@ -30,6 +31,7 @@ export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/inputrc"
 export ALSA_CONFIG_PATH="$XDG_CONFIG_HOME/alsa/asoundrc"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
+export STACK_ROOT="$XDG_DATA_HOME"/stack
 
 #move .vim from HOME
 #export VIMINIT=":source $XDG_CONFIG_HOME"/vim/vimrc
