@@ -16,7 +16,7 @@ XTerm.vt100.faceName: mono:size=10
 !cursorColor  STRING,  &colorname[258] },
 !termname     STRING,  &termname },
 !shell        STRING,  &shell },
-!xfps         INTEGER, &xfps },
+*.xfps: 30 
 !actionfps    INTEGER, &actionfps },
 !blinktimeout INTEGER, &blinktimeout },
 !bellvolume   INTEGER, &bellvolume },

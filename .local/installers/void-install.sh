@@ -32,6 +32,7 @@ fi
 mkdir ~/docs/
 mkdir ~/dl/
 mkdir ~/media/
+mkdir -p ~/.local/share/gnupg/
 
 
 ### install system programs/libraries ###
@@ -42,7 +43,7 @@ if [ $input == 'y' ] || [ $input == 'Y' ]; then
 
 #install xorg
 #sudo xbps-install -Sy xorg xterm
-sudo xbps-install -Sy xorg-minimal xrdb xsetroot xterm xprop xrandr 
+sudo xbps-install -Sy xorg-minimal xrdb xsetroot xterm xprop xrandr xclip 
 
 #sound programs
 sudo xbps-install -Sy alsa-utils apulse #pulseaudio pulsemixer 
@@ -200,7 +201,7 @@ fi
 
 ###themes and fonts
 #most themes are stored in my dotfiles repo
-sudo xbps-install -S nerd-fonts-otf
+#sudo xbps-install -S nerd-fonts-otf
 
 
 ### install user programs ###
@@ -213,7 +214,7 @@ if [ $input == 'y' ] || [ $input == 'Y' ]; then
 #cli programs to isntall
 sudo xbps-install -Sy neovim htop 
 #pulsemixer pamixer
-sudo xbps-install -Sy mpv cmus cmus-ffmpeg cava  #audio cava -> console audio visualizer for alsa 
+sudo xbps-install -Sy mpv mpd ncmpcpp #cmus cmus-ffmpeg cava  #audio cava -> console audio visualizer for alsa 
 sudo xbps-install -Sy lf mtm  #file browser terminal multiplexor 
 sudo xbps-install -Sy ImageMagick ffmpegthumbnailer viu #jp2a #for ascii image previews and video thumbnails in lf
 sudo xbps-install -Sy zathura zathura-cb zathura-pdf-mupdf #pdfs manga
@@ -251,7 +252,7 @@ clear
 echo "install muttwizard dependencies? (y/N)"
 read input
 if [ $input == 'y' ] || [ $input == 'Y' ]; then
-	sudo xbps-install -Sy neomutt isync msmtp pass urlview
+	sudo xbps-install -Sy neomutt isync msmtp pass urlview lynx
 fi
 
 ### SYSTEM SETUP ### 

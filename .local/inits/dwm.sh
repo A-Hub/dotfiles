@@ -6,6 +6,7 @@ dunst &
 picom &
 redshift &
 #sh ~/.fehbg &
+mpd &
 feh --no-fehbg --bg-scale ~/.config/wall &
 devmon --mount-options "exec,nosuid,nodev,noatime" &
 sh ~/.local/scripts/dwm-bar.sh -l &

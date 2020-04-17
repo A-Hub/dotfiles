@@ -32,6 +32,8 @@ export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/inputrc"
 export ALSA_CONFIG_PATH="$XDG_CONFIG_HOME/alsa/asoundrc"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 export STACK_ROOT="$XDG_DATA_HOME"/stack
+export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
 #move .vim from HOME
 #export VIMINIT=":source $XDG_CONFIG_HOME"/vim/vimrc
@@ -56,7 +58,7 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 #set preferred programs
 export EDITOR=vim
 export VISUAL=vim
-export BROWSER=surf
+export BROWSER=browser.sh
 export TERMINAL=st
 
 

@@ -1,6 +1,7 @@
 #people
 https://lukesmith.xyz/rss.xml
 https://lunduke.com/index.xml
+https://www.distrotube.com/videos/index.xml
 
 #youtube
 # ctrl + u on channel. look for number like channel_id
@@ -16,13 +17,19 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCl2mFZoRqjw_ELax4Yisf6w
 https://www.youtube.com/feeds/videos.xml?channel_id=UCHhnf3RgHabfk5f2gUX6EVQ
 #count dankula
 https://www.youtube.com/feeds/videos.xml?channel_id=UC7SeFWZYFmsm1tqWxfuOTPQ
+#brew
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVQGtUcRjHTQLTTu-5s9_4Q
+ 
 
 #bitchute
 https://www.bitchute.com/feeds/rss/channel/mistermetokur
 
 #podcasts
 http://podcasts.joerogan.net/feed/rss
+http://jockopodcast.libsyn.com/rss
 https://thedickshow.com/feed/podcast/
+https://notrelated.xyz/rss
+
 
 #void
 https://voidlinux.org/atom.xml
