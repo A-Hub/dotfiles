@@ -8,9 +8,8 @@ super + F10
 super + c
 	sh ~/.local/scripts/toggle-comp
 
-super + a
-	sh ~/scripts/appimages
-
+super + o
+    browser.sh "$(xclip -o | cut -d '%' -f 1-)"
 
 super + m
 	st -e neomutt

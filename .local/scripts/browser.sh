@@ -1,12 +1,14 @@
-#!/usr/bin/env sh
-SEL="$(echo "site\nvideo\nyt\nfile" | dmenu)"
+#!/usr/bin/env bash
+OPTS=(site video yt file)
 
-[ "$SEL" = "site" ] && surf "$1" && exit
+SEL="$( echo "${OPTS[@]}" | sed 's/ /\n/g' | dmenu)"
 
-[ "$SEL" = "video" ] && mpv "$1" && exit
+[ "$SEL" = "${OPTS[0]}" ] && surf "$1" && exit
 
-[ "$SEL" = "yt" ] && mpv --ytdl-format=18 "$1" && exit
+[ "$SEL" = "${OPTS[1]}" ] && mpv "$1" && exit
 
-[ "$SEL" = "file" ] && wget -P ~/dl/ "$1" && exit
+[ "$SEL" = "${OPTS[2]}" ] && mpv --ytdl-format=18 "$1" && exit
 
+[ "$SEL" = "${OPTS[3]}" ] && wget -P ~/dl/ "$1" && exit
 
+surf "$1"

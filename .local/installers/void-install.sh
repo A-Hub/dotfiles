@@ -214,7 +214,7 @@ if [ $input == 'y' ] || [ $input == 'Y' ]; then
 #cli programs to isntall
 sudo xbps-install -Sy neovim htop 
 #pulsemixer pamixer
-sudo xbps-install -Sy mpv mpd ncmpcpp #cmus cmus-ffmpeg cava  #audio cava -> console audio visualizer for alsa 
+sudo xbps-install -Sy mpv mpd ncmpcpp mpc #cmus cmus-ffmpeg cava  #audio cava -> console audio visualizer for alsa 
 sudo xbps-install -Sy lf mtm  #file browser terminal multiplexor 
 sudo xbps-install -Sy ImageMagick ffmpegthumbnailer viu #jp2a #for ascii image previews and video thumbnails in lf
 sudo xbps-install -Sy zathura zathura-cb zathura-pdf-mupdf #pdfs manga
@@ -222,6 +222,7 @@ sudo xbps-install -Sy youtube-dl #download youtube videos
 sudo xbps-install -Sy transmission transmission-remote-cli  #torrents
 sudo xbps-install -Sy pywal #generate themes from pictures
 sudo xbps-install -Sy tealdeer ufetch termdown  # misc utils
+sudo xbps-install -Sy scrot
 #sudo xbps-install -Sy trackma
 
 fi

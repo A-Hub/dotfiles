@@ -1,40 +1,43 @@
 #people
-https://lukesmith.xyz/rss.xml
-https://lunduke.com/index.xml
-https://www.distrotube.com/videos/index.xml
+https://lukesmith.xyz/rss.xml linux
+https://lunduke.com/index.xml linux
+https://www.distrotube.com/videos/index.xml linux
 
 #youtube
 # ctrl + u on channel. look for number like channel_id
+#luke smith
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA yt
 #dunky
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsvn_Po0SmunchJYOWpOxMg
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsvn_Po0SmunchJYOWpOxMg yt
 #chubbyemu
-https://www.youtube.com/feeds/videos.xml?channel_id=UCKOvOaJv4GK-oDqx-sj7VVg
+https://www.youtube.com/feeds/videos.xml?channel_id=UCKOvOaJv4GK-oDqx-sj7VVg yt
 #captain sinbad
-https://www.youtube.com/feeds/videos.xml?channel_id=UC8XKyvQ5Ne_bvYbgv8LaIeg
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8XKyvQ5Ne_bvYbgv8LaIeg yt
 #louis rossman
-https://www.youtube.com/feeds/videos.xml?channel_id=UCl2mFZoRqjw_ELax4Yisf6w
+https://www.youtube.com/feeds/videos.xml?channel_id=UCl2mFZoRqjw_ELax4Yisf6w yt
 #digibro
-https://www.youtube.com/feeds/videos.xml?channel_id=UCHhnf3RgHabfk5f2gUX6EVQ
+https://www.youtube.com/feeds/videos.xml?channel_id=UCHhnf3RgHabfk5f2gUX6EVQ yt 
 #count dankula
-https://www.youtube.com/feeds/videos.xml?channel_id=UC7SeFWZYFmsm1tqWxfuOTPQ
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7SeFWZYFmsm1tqWxfuOTPQ yt
 #brew
-https://www.youtube.com/feeds/videos.xml?channel_id=UCVQGtUcRjHTQLTTu-5s9_4Q
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVQGtUcRjHTQLTTu-5s9_4Q yt
  
 
 #bitchute
-https://www.bitchute.com/feeds/rss/channel/mistermetokur
+https://www.bitchute.com/feeds/rss/channel/mistermetokur yt 
 
 #podcasts
-http://podcasts.joerogan.net/feed/rss
-http://jockopodcast.libsyn.com/rss
-https://thedickshow.com/feed/podcast/
-https://notrelated.xyz/rss
-
+http://podcasts.joerogan.net/feed/rss pod
+http://jockopodcast.libsyn.com/rss pod
+https://thedickshow.com/feed/podcast/ pod
+https://notrelated.xyz/rss pod
+https://anchor.fm/s/130b5bcc/podcast/rss pod
 
 #void
-https://voidlinux.org/atom.xml
-https://github.com/void-linux/void-packages/commits/master.atom
-https://github.com/void-linux/xbps/commits/master.atom
+https://voidlinux.org/atom.xml linux
+https://github.com/void-linux/void-packages/commits/master.atom linux
+https://github.com/void-linux/xbps/commits/master.atom linux
 
 #news
-https://hnrss.org/frontpage
+https://hnrss.org/frontpage news
+https://liveleak.com/rss

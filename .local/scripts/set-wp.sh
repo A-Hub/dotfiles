@@ -5,5 +5,6 @@
 [ -f "$1" ] || exit
 wal -n -s -t -e -i "$1"
 rm ~/.config/wall 
+rm ~/.fehbg
 ln -s "$1" $HOME/.config/wall  
 feh --no-fehbg --bg-scale ~/.config/wall
