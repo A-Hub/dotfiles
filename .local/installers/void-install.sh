@@ -43,7 +43,7 @@ if [ $input == 'y' ] || [ $input == 'Y' ]; then
 
 #install xorg
 #sudo xbps-install -Sy xorg xterm
-sudo xbps-install -Sy xorg-minimal xrdb xsetroot xterm xprop xrandr xclip 
+sudo xbps-install -Sy xorg-minimal xrdb xsetroot xterm xprop xrandr xclip xkill 
 
 #sound programs
 sudo xbps-install -Sy alsa-utils apulse #pulseaudio pulsemixer 

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+[ -z "$1" ] && URL="$( xclip -o | sed 's/$//g')"  && browser.sh "$URL" && exit 
+
 OPTS=(site video yt file)
 
 SEL="$( echo "${OPTS[@]}" | sed 's/ /\n/g' | dmenu)"

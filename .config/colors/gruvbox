@@ -14,3 +14,12 @@
 #d3869b
 #8ec07c
 #ebdbb2
+
+
+#define BACKGROUND #1d2021
+#define FOREGROUND #ebdbb2
+
+! hard contrast: *background: #1d2021
+!*background: #282828
+! soft contrast: *background: #32302f
+!*foreground: #ebdbb2
