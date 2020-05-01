@@ -94,6 +94,8 @@ battery() {
 	icon=""
 	if [ "$status" = "Discharging" ]; then
 		icon="🔋 ${charge}%"	
+    elif [ -z "$status" ]; then
+        icon="🔌"
 	else 
 		icon="🔌 ${charge}%"	
 	fi

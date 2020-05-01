@@ -33,6 +33,7 @@ mkdir ~/docs/
 mkdir ~/dl/
 mkdir ~/media/
 mkdir -p ~/.local/share/gnupg/
+mkdir -p ~/.config/mpd/playlists
 
 
 ### install system programs/libraries ###
@@ -130,6 +131,7 @@ if [ $amdin == 'y' ] || [ $amdin == 'Y' ]; then
 	sudo xbps-install -Sy xf86-video-amdgpu mesa-vulkan-radeon
 	sudo xbps-install -Sy radeontop
 
+    sudo mkdir -p /etc/X11/xorg.conf.d/
 	sudo ln -s ~/.sysconf/etc/X11/xorg.conf.d/20-amdgpu.conf /etc/X11/xorg.conf.d/
 
 fi
@@ -220,7 +222,7 @@ sudo xbps-install -Sy youtube-dl #download youtube videos
 sudo xbps-install -Sy transmission transmission-remote-cli  #torrents
 sudo xbps-install -Sy pywal #generate themes from pictures
 sudo xbps-install -Sy tealdeer ufetch termdown  # misc utils
-sudo xbps-install -Sy scrot
+sudo xbps-install -Sy scrot newsboat
 #sudo xbps-install -Sy trackma
 
 fi

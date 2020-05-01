@@ -9,6 +9,8 @@ git clone https://github.com/A-Hub/st.git ~/devel/repos/st
 git clone https://github.com/A-Hub/surf.git ~/devel/repos/surf
 git clone https://github.com/trizen/straw-viewer.git ~/devel/repos/straw-viewer
 
+git clone https://github.com/dylanaraps/startpage.git ~/devel/startpage/
+
 cd ~/devel/repos/dwm
 sudo make clean install
 
