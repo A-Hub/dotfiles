@@ -127,9 +127,7 @@ read amdin
 
 if [ $amdin == 'y' ] || [ $amdin == 'Y' ]; then
 #install amd libraries
-	#sudo xbps-install -Sy libGL libGL-32bit mesa-ati-dri mesa-ati-dri-32bit
-	sudo xbps-install -Sy xf860-video-amdgpu
-#sudo xbps-install -S vulkan-loader vulkan-loader-32bit
+	sudo xbps-install -Sy xf86-video-amdgpu mesa-vulkan-radeon
 	sudo xbps-install -Sy radeontop
 
 	sudo ln -s ~/.sysconf/etc/X11/xorg.conf.d/20-amdgpu.conf /etc/X11/xorg.conf.d/

@@ -9,7 +9,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-Plug 'dracula/vim', { 'as': 'dracula' }
+"Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'preservim/nerdtree'
 Plug 'davisdude/vim-love-docs'
 
@@ -17,7 +17,7 @@ call plug#end()
 
 "set variables
     let g:airline_powerline_fonts = 1
-    let g:airline_theme='base16color'
+    let g:airline_theme='base16_colors'
     let g:airline#extensions#tabline#enabled = 1
 
 "syntax numbers, wildmode
