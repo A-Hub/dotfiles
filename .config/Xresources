@@ -19,7 +19,7 @@ XTerm.vt100.faceName: mono:size=10
 *.xfps: 30 
 !actionfps    INTEGER, &actionfps },
 !blinktimeout INTEGER, &blinktimeout },
-!bellvolume   INTEGER, &bellvolume },
+*.bellvolume: 100   !INTEGER, &bellvolume },
 !cwscale      FLOAT,   &cwscale },
 !chscale      FLOAT   &chscale },
 
