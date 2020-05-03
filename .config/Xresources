@@ -114,6 +114,27 @@ dmenu.font : mono:pixelsize=13
     #define DMENU_SFG  COLOR15
 #endif
 
+
+! 6 11 14
+#define COOL COLOR6
+
+#ifndef DMENU_SHFG
+    #define DMENU_SHFG  COOL
+#endif
+
+#ifndef DMENU_SHBG
+    #define DMENU_SHBG  COLOR1
+#endif
+
+#ifndef DMENU_NHFG
+    #define DMENU_NHFG  COOL
+#endif
+
+#ifndef DMENU_NHBG
+    #define DMENU_NHBG  COLOR0
+#endif
+
+
 !source colors for BG and FG if not defined
 #ifndef BACKGROUND
     #define BACKGROUND COLOR0
@@ -138,6 +159,10 @@ dmenu.foreground :    DMENU_NFG
 dmenu.selbackground : DMENU_SBG
 dmenu.selforeground : DMENU_SFG 
 
+dmenu.selhighlightfg : DMENU_SHFG
+dmenu.selhighlightbg : DMENU_SHBG
+dmenu.normhighlightfg : DMENU_NHFG
+dmenu.normhighlightbg : DMENU_NHBG
 
 /* ST/Xterm colors */
 *.color0:     COLOR0 
