@@ -1,9 +1,12 @@
-super + F12
-	amixer sset Master 5%+  && ~/.local/scripts/dwm-bar.sh
-super + F11
-	amixer sset Master 5%-  && ~/.local/scripts/dwm-bar.sh
-super + F10
-	amixer sset Master toggle && ~/.local/scripts/dwm-bar.sh
+XF86AudioRaiseVolume
+    pulsemixer --change-volume +5 && ~/.local/scripts/dwm-bar.sh 
+    #amixer sset Master 5%+  && ~/.local/scripts/dwm-bar.sh
+XF86AudioLowerVolume
+    pulsemixer --change-volume -5 && ~/.local/scripts/dwm-bar.sh 
+	#amixer sset Master 5%-  && ~/.local/scripts/dwm-bar.sh
+XF86AudioMute
+    pulsemixer --toggle-mute && ~/.local/scripts/dwm-bar.sh 
+	#amixer sset Master toggle && ~/.local/scripts/dwm-bar.sh
 
 super + c
 	sh ~/.local/scripts/toggle-comp

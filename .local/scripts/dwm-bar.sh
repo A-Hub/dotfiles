@@ -26,16 +26,16 @@ ddate () {
 
 
 audio () {
-   # icon="🔊 $(pulsemixer --get-volume | awk '{print $1}')"
-   # if [ $(pulsemixer --get-mute) -eq 1 ]; then
-   #     icon="🔇"
-   # fi
-   volstat="$(amixer get Master)"
-    if [ ! -z "$(echo $volstat | grep "\[off\]")" ]; then
+    icon="🔊 $(pulsemixer --get-volume | awk '{print $1}')"
+    if [ $(pulsemixer --get-mute) -eq 1 ]; then
         icon="🔇"
-	else
-		icon="🔊 $(echo $volstat | grep -o "\[[0-9]\+%\]" | sed 's/[^0-9]*//g')"
     fi
+   #volstat="$(amixer get Master)"
+   # if [ ! -z "$(echo $volstat | grep "\[off\]")" ]; then
+   #     icon="🔇"
+    #else
+	#	icon="🔊 $(echo $volstat | grep -o "\[[0-9]\+%\]" | sed 's/[^0-9]*//g')"
+    #fi
 
     printf "%s\n" "$icon"
 }

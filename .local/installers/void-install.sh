@@ -34,6 +34,7 @@ mkdir ~/dl/
 mkdir ~/media/
 mkdir -p ~/.local/share/gnupg/
 mkdir -p ~/.config/mpd/playlists
+sudo mkdir -p /etc/X11/xorg.conf.d/
 
 
 ### install system programs/libraries ###
@@ -277,12 +278,6 @@ if [ $input == 'y' ] || [ $input == 'Y' ]; then
 	cd ~/.local/scripts/
 	~/.local/scripts/update-hosts
 fi
-
-
-
-#add directories if they dont exist
-sudo mkdir /etc/X11/xorg.conf.d/
-mkdir -p "$XDG_DATA_HOME"/vim/{undo,swap,backup}
 
 
 echo "disable mouse acceleration? (y/N)"
