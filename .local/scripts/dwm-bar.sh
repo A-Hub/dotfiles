@@ -6,7 +6,7 @@
 # by default this script will only run once, to run in 
 # a loop give it the -l flag: ./dwm-bar.sh -l
 #
-# Requires: pulsemixer 
+# Requires: pulsemixer, xbps (for sys_updates) 
 # 
 # ddate -> creates a date string
 # audio -> creates a string representing the state of pulseaudio
@@ -18,7 +18,7 @@
 # https://gitlab.com/ahub/dotfiles
 #========================================================================
 
-SEP="  ][  "
+SEP="  |  "
 
 ddate () {
 	printf "%s\n" "$(date "+%B %d, %Y (%a)  ( %I:%M )")"
@@ -47,12 +47,12 @@ netup() {
 	do
     	if [ $(cat /sys/class/net/$iface/operstate | grep up) ] ; then
         	if [ $(echo $iface | grep w) ]; then
-            	icon="📡 $iface"
+            	icon="📡"
         	else
-            	icon="🌐 $iface"
+            	icon="🌐"
         	fi
     	elif [ -z "$icon" ]; then
-        	icon="❗ no internet"
+        	icon="❗"
     	fi
 	done
 
@@ -83,7 +83,7 @@ sysupdates() {
 
 
 cputemp() {
-	icon="CPU: $(cat /sys/class/thermal/thermal_zone0/temp | sed 's/\(.\)..$/.\1°C/')"
+	icon="$(cat /sys/class/thermal/thermal_zone0/temp | sed 's/\(.\)..$/.\1°C/')"
 
 	printf "%s\n" "$icon"
 }
@@ -106,7 +106,7 @@ battery() {
 #}
 
 update() {
-    xsetroot -name " $(sysupdates)$SEP$(weather)$SEP$(cputemp)$SEP$(battery)$SEP$(netup)$SEP$(audio)$SEP$(ddate) "
+    xsetroot -name " $(sysupdates)$SEP$(cputemp)$SEP$(battery)$SEP$(netup)$SEP$(audio)$SEP$(weather)$SEP$(ddate) "
 }
 
 if [ $1 ] && [ $1 = "-l" ]; then    

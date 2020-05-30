@@ -228,6 +228,12 @@ sudo xbps-install -Sy scrot newsboat
 
 fi
 
+clear
+echo "install my gui programs? (y/N)"
+read input
+if [ $input == 'y' ] || [ $input == 'Y' ]; then
+    sudo xbps-install -Sy luakit
+fi
 
 clear
 echo "install gaming programs(wine lutris steam)? (y/N)"

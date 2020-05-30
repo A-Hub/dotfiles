@@ -35,13 +35,8 @@ export STACK_ROOT="$XDG_DATA_HOME"/stack
 export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
-#move .vim from HOME
-#export VIMINIT=":source $XDG_CONFIG_HOME"/vim/vimrc
-
-
 #other settings
 export QT_QPA_PLATFORMTHEME="gtk2"  # Have QT use gtk2 theme.
-
 
 export LESSHISTFILE=/dev/null
 
